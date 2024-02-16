@@ -10,6 +10,9 @@ namespace Application.Services
     {
         private readonly IJokeApiProxy _jokeApiProxy;
         private readonly string _apiBaseUrl;
+        public ChuckNorrisJokeService()
+        {
+        }
 
         public ChuckNorrisJokeService(IJokeApiProxy jokeApiProxy)
         {

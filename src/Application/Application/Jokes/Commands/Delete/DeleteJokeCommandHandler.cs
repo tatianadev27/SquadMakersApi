@@ -1,5 +1,4 @@
 ﻿using Domain.Aggregate;
-using Domain.Entities;
 using Domain.Repositories;
 using MediatR;
 

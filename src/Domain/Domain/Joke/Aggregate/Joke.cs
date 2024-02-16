@@ -14,7 +14,12 @@ namespace Domain.Aggregate
             Text = text ?? throw new ArgumentNullException(nameof(text));
         }
         public static Joke Create(JokeText text, JokeId id = null) => new Joke(id, text);
-        public static Joke Delete(Joke joke) => new Joke(joke.Id, joke.Text);
+        public static Joke Delete(Joke joke)
+        {
+            
+            return new Joke(joke.Id, joke.Text);
+        }
+
         public static Joke Update(Joke joke, JokeText newText)
         {
             joke.Text = newText;

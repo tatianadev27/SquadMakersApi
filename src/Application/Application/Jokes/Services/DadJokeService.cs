@@ -11,7 +11,11 @@ namespace Application.Services
         private readonly IJokeApiProxy _jokeApiProxy;
         private readonly string _apiBaseUrl;
 
-        public DadJokeService(IJokeApiProxy jokeApiProxy, IConfiguration configuration)
+        public DadJokeService()
+        {
+        }
+
+        public DadJokeService(IJokeApiProxy jokeApiProxy)
         {
             _jokeApiProxy = jokeApiProxy;
             _apiBaseUrl = "https://icanhazdadjoke.com/api";

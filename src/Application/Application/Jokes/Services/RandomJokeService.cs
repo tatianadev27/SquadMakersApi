@@ -1,6 +1,4 @@
 ﻿using Domain.Aggregate;
-using Domain.Entities;
-using Domain.Proxy;
 using Domain.Services;
 
 namespace Application.Services
