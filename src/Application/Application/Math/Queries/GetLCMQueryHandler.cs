@@ -10,7 +10,7 @@ namespace Application.Math.Queries
             }
             public async Task<int> Handle(GetLCMQuery request, CancellationToken cancellationToken)
         {
-            return LeastCommonMultipleResult.Calcular(request.Numbers);
+            return LeastCommonMultipleResult.Calculate(request.Numbers);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Application.Math.Queries
 
             public async Task<int> Handle(GetPlusNumberQuery request, CancellationToken cancellationToken)
         {
-            return PlusNumberResult.Calcular(request.Number);
+            return PlusNumberResult.Calculate(request.Number);
         }
     }
 }
