@@ -36,9 +36,7 @@ namespace Infraestructure.Persistence.Repositories
             var existingJoke = await _dbContext.Jokes.FindAsync(entity.Id.Value);
             if (existingJoke == null)
                 return false;
-
-            existingJoke.SetJokeText(entity.Text);
-
+            _dbContext.Update(existingJoke);
             await _dbContext.SaveChangesAsync();
             return true;
         }

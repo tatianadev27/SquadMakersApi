@@ -2,7 +2,7 @@
 
 namespace Application.Commands.Create
 {
-    public class CreateJokeCommand : IRequest<string>
+    public class CreateJokeCommand : IRequest<bool>
     {
         public string Text { get; }
 

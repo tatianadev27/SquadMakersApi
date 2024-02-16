@@ -17,18 +17,6 @@ namespace Domain.Aggregate.Tests
         }
 
         [TestMethod]
-        public void SetJokeText_ChangesText_WhenCalled()
-        {
-            JokeId id = new JokeId(1);
-            Joke joke = Joke.Create(new JokeText("Why don't scientists trust atoms? Because they make up everything."));
-            JokeText newText = new JokeText("A skeleton walks into a bar and says, 'Give me a beer and a mop.'");
-
-            joke.SetJokeText(newText);
-
-            Assert.AreEqual(newText, joke.Text);
-        }
-
-        [TestMethod]
         public void Create_ReturnsNewJoke_WhenCalled()
         {
             JokeText text = new JokeText("Why did the bicycle fall over? Because it was two tired.");
@@ -71,9 +59,7 @@ namespace Domain.Aggregate.Tests
             JokeText initialText = new JokeText("Why did the tomato turn red? Because it saw the salad dressing.");
             Joke joke = Joke.Create(initialText, id);
             JokeText newText = new JokeText("Why don't skeletons fight each other? They don't have the guts.");
-            joke.SetJokeText(newText);
-            Joke.Update(joke);
-
+            Joke.Update(joke, newText);
             Assert.IsNotNull(joke.Text);
             Assert.AreEqual(newText, joke.Text);
         }

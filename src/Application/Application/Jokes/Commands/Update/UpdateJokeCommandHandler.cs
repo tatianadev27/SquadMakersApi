@@ -20,9 +20,8 @@ namespace Application.Jokes.Commands.Update
             var existingJoke = await _jokeRepository.GetById(request.Id);
             if (existingJoke == null)
                 return false;
-
-            var joke = Joke.Update(existingJoke.Id, new JokeText(request.Text));
-            return await _jokeRepository.Update(joke); ;
+            var joke = Joke.Update(existingJoke, new JokeText(request.Text));
+            return await _jokeRepository.Update(joke);
         }
     }
 }
