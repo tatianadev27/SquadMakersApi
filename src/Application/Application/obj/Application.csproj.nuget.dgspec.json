@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Application\\Application\\Application.csproj": {}
+    "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Application\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Application\\Application\\Application.csproj": {
+    "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Application\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Application\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Application\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Application\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Application\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\julieth.betancur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Application\\Application\\obj\\",
+        "outputPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Application\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julieth.betancur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj"
+              "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj"
               }
             }
           }
@@ -86,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj": {
+    "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\julieth.betancur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Domain\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Domain\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julieth.betancur\\AppData\\Roaming\\NuGet\\NuGet.Config",

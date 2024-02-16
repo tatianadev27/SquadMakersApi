@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T596BzjzUTrxup4ha+hMWmQyM8Mzr2SQto9gkYnv9WxkJUVrgfDwxZ7qvKiT8mBxbOB2GUF/HjpA6PEEALZsuA==",
+  "dgSpecHash": "SJpwQDN1wJGcv0UBx2pLtxyVvn+Hb81iKyIHhiMJ2NewiO5cSfn4KNOIPz+wHXJFjr2MNgjnFckrUWWW0MQ16w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Application\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Application\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julieth.betancur\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\julieth.betancur\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

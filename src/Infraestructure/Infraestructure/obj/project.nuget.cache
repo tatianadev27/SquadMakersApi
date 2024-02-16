@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1d6KR15c+TExWID/nr4Xl985HfAdo86gzmrggSYWx6ILNYpjaEwdBIp60cyXeXRscJrFlrWO1bVxgcBD30wJGw==",
+  "dgSpecHash": "9tF7sV3rQPXp4W1Hv9Gz3SVbaR0YI53VqbVOhlfUc527BM7AF0vn/DZV8Yx+qbDqRDgJt2hGUfd/Uec/YonBWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Infraestructure\\Infraestructure\\Infraestructure.csproj",
+  "projectFilePath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Infraestructure\\Infraestructure\\Infraestructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julieth.betancur\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.2\\microsoft.entityframeworkcore.8.0.2.nupkg.sha512",
     "C:\\Users\\julieth.betancur\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.2\\microsoft.entityframeworkcore.abstractions.8.0.2.nupkg.sha512",

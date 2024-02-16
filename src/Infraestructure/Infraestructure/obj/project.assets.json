@@ -704,11 +704,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Infraestructure\\Infraestructure\\Infraestructure.csproj",
+      "projectUniqueName": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Infraestructure\\Infraestructure\\Infraestructure.csproj",
       "projectName": "Infraestructure",
-      "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Infraestructure\\Infraestructure\\Infraestructure.csproj",
+      "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Infraestructure\\Infraestructure\\Infraestructure.csproj",
       "packagesPath": "C:\\Users\\julieth.betancur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Infraestructure\\Infraestructure\\obj\\",
+      "outputPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Infraestructure\\Infraestructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\julieth.betancur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -726,8 +726,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\v2\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj"
+            "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\julieth.betancur\\Downloads\\Challenge\\SquadMakersApi\\src\\Domain\\Domain\\Domain.csproj"
             }
           }
         }
