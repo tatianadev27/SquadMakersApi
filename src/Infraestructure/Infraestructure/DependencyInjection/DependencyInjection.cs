@@ -15,7 +15,7 @@ namespace Infraestructure.DependencyInjection
         {
             services.AddDbContext<JokeDbContext>(options =>
             {
-                options.UseInMemoryDatabase(Guid.NewGuid().ToString())
+                options.UseInMemoryDatabase("JokeDataBase")
                     .EnableSensitiveDataLogging()
                     .ConfigureWarnings(b => b.Ignore(InMemoryEventId.TransactionIgnoredWarning));
             });

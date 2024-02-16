@@ -17,7 +17,7 @@ namespace Application.Jokes.Commands.Update
 
         public async Task<bool> Handle(UpdateJokeCommand request, CancellationToken cancellationToken)
         {
-            var existingJoke = await _jokeRepository.GetById(request.Id);
+            var existingJoke = await _jokeRepository.GetById(new JokeId(request.Id));
             if (existingJoke == null)
                 return false;
             var joke = Joke.Update(existingJoke, new JokeText(request.Text));

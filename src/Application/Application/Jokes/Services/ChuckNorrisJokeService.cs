@@ -17,7 +17,7 @@ namespace Application.Services
         public ChuckNorrisJokeService(IJokeApiProxy jokeApiProxy)
         {
             _jokeApiProxy = jokeApiProxy;
-            _apiBaseUrl = "https://api.chucknorris.io/";
+            _apiBaseUrl = "https://api.chucknorris.io/jokes/random";
         }
 
         public async Task<Joke> GetRandomJoke()

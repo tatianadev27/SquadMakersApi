@@ -11,9 +11,9 @@ namespace Application.DependencyInjection
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddScoped<IJokeServiceFactory, JokeServiceFactory>();
-            services.AddScoped<IJokeService, ChuckNorrisJokeService>();
-            services.AddScoped<IJokeService, DadJokeService>();
-            services.AddScoped<IJokeService, RandomJokeService>();
+            services.AddTransient<ChuckNorrisJokeService>();
+            services.AddTransient<DadJokeService>();
+            services.AddTransient<RandomJokeService>();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             return services;
         }

@@ -15,12 +15,12 @@ namespace Application.Jokes.Commands.Delete
 
         public async Task<bool> Handle(DeleteJokeCommand request, CancellationToken cancellationToken)
         {
-            var existingJoke = await _jokeRepository.GetById(request.Id);
+            var existingJoke = await _jokeRepository.GetById(new Domain.Entities.JokeId(request.Id));
             if (existingJoke == null)
                 return false;
 
             var joke = Joke.Delete(existingJoke);
-            return await _jokeRepository.Delete(joke.Id.Value);
+            return await _jokeRepository.Delete(joke.Id);
         }
     }
 }

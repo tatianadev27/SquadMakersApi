@@ -16,12 +16,14 @@ namespace Domain.Aggregate
         public static Joke Create(JokeText text, JokeId id = null) => new Joke(id, text);
         public static Joke Delete(Joke joke)
         {
-            
+            if (joke.Id == null) throw new ArgumentNullException(nameof(joke.Id));
             return new Joke(joke.Id, joke.Text);
         }
 
         public static Joke Update(Joke joke, JokeText newText)
         {
+            if (joke.Id == null) throw new ArgumentNullException(nameof(joke.Id));
+            if (newText == null) throw new ArgumentNullException(nameof(newText));
             joke.Text = newText;
             return joke;
         }

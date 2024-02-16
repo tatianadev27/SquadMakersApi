@@ -17,16 +17,16 @@ namespace Application.Jokes.Commands.Delete.Tests
             var existingJoke = Joke.Create(new JokeText("Why did the scarecrow win an award? Because he was outstanding in his field."), jokeId);
 
             var mockRepository = new Mock<IJokeRepository>();
-            mockRepository.Setup(repo => repo.GetById(jokeId.Value)).ReturnsAsync(existingJoke);
-            mockRepository.Setup(repo => repo.Delete(jokeId.Value)).ReturnsAsync(true);
+            mockRepository.Setup(repo => repo.GetById(new JokeId(jokeId.Value))).ReturnsAsync(existingJoke);
+            mockRepository.Setup(repo => repo.Delete(jokeId)).ReturnsAsync(true);
 
             var handler = new DeleteJokeCommandHandler(mockRepository.Object);
 
             var result = await handler.Handle(command, CancellationToken.None);
 
             Assert.IsTrue(result);
-            mockRepository.Verify(repo => repo.GetById(jokeId.Value), Times.Once);
-            mockRepository.Verify(repo => repo.Delete(jokeId.Value), Times.Once);
+            mockRepository.Verify(repo => repo.GetById(new JokeId(jokeId.Value)), Times.Once);
+            mockRepository.Verify(repo => repo.Delete(jokeId), Times.Once);
         }
 
         [TestMethod]
@@ -36,15 +36,15 @@ namespace Application.Jokes.Commands.Delete.Tests
             var command = new DeleteJokeCommand { Id = jokeId.Value };
 
             var mockRepository = new Mock<IJokeRepository>();
-            mockRepository.Setup(repo => repo.GetById(jokeId.Value)).ReturnsAsync((Joke)null);
+            mockRepository.Setup(repo => repo.GetById(jokeId)).ReturnsAsync((Joke)null);
 
             var handler = new DeleteJokeCommandHandler(mockRepository.Object);
 
             var result = await handler.Handle(command, CancellationToken.None);
 
             Assert.IsFalse(result);
-            mockRepository.Verify(repo => repo.GetById(jokeId.Value), Times.Once);
-            mockRepository.Verify(repo => repo.Delete(jokeId.Value), Times.Never);
+            mockRepository.Verify(repo => repo.GetById(new JokeId(jokeId.Value)), Times.Once);
+            mockRepository.Verify(repo => repo.Delete(jokeId ), Times.Never);
         }
     }
 }

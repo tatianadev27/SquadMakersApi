@@ -18,7 +18,7 @@ namespace Application.Jokes.Commands.Update.Tests
             var existingJoke = Joke.Create(new JokeText("Old joke text"), jokeId);
 
             var mockRepository = new Mock<IJokeRepository>();
-            mockRepository.Setup(repo => repo.GetById(jokeId.Value)).ReturnsAsync(existingJoke);
+            mockRepository.Setup(repo => repo.GetById(new JokeId(jokeId.Value))).ReturnsAsync(existingJoke);
             mockRepository.Setup(repo => repo.Update(It.IsAny<Joke>())).ReturnsAsync(true);
 
             var handler = new UpdateJokeCommandHandler(mockRepository.Object);
@@ -26,7 +26,7 @@ namespace Application.Jokes.Commands.Update.Tests
             var result = await handler.Handle(command, CancellationToken.None);
 
             Assert.IsTrue(result);
-            mockRepository.Verify(repo => repo.GetById(jokeId.Value), Times.Once);
+            mockRepository.Verify(repo => repo.GetById(new JokeId(jokeId.Value)), Times.Once);
             mockRepository.Verify(repo => repo.Update(It.IsAny<Joke>()), Times.Once);
         }
 
@@ -37,14 +37,14 @@ namespace Application.Jokes.Commands.Update.Tests
             var command = new UpdateJokeCommand { Id = jokeId.Value, Text = "New joke text" };
 
             var mockRepository = new Mock<IJokeRepository>();
-            mockRepository.Setup(repo => repo.GetById(jokeId.Value)).ReturnsAsync((Joke)null); 
+            mockRepository.Setup(repo => repo.GetById(jokeId)).ReturnsAsync((Joke)null); 
 
             var handler = new UpdateJokeCommandHandler(mockRepository.Object);
 
             var result = await handler.Handle(command, CancellationToken.None);
 
             Assert.IsFalse(result);
-            mockRepository.Verify(repo => repo.GetById(jokeId.Value), Times.Once);
+            mockRepository.Verify(repo => repo.GetById(jokeId), Times.Once);
             mockRepository.Verify(repo => repo.Update(It.IsAny<Joke>()), Times.Never);
         }
     }

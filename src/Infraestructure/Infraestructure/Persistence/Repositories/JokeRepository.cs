@@ -1,4 +1,5 @@
 ﻿using Domain.Aggregate;
+using Domain.Entities;
 using Domain.Repositories;
 using Infraestructure.Persintence.Database;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,7 @@ namespace Infraestructure.Persistence.Repositories
             return await _dbContext.Jokes.ToListAsync();
         }
 
-        public async Task<Joke> GetById(int id)
+        public async Task<Joke> GetById(JokeId id)
         {
             return await _dbContext.Jokes.FindAsync(id);
         }
@@ -33,7 +34,7 @@ namespace Infraestructure.Persistence.Repositories
 
         public async Task<bool> Update(Joke entity)
         {
-            var existingJoke = await _dbContext.Jokes.FindAsync(entity.Id.Value);
+            var existingJoke = await _dbContext.Jokes.FindAsync(entity.Id);
             if (existingJoke == null)
                 return false;
             _dbContext.Update(existingJoke);
@@ -41,7 +42,7 @@ namespace Infraestructure.Persistence.Repositories
             return true;
         }
 
-        public async Task<bool> Delete(int id)
+        public async Task<bool> Delete(JokeId id)
         {
             var existingJoke = await _dbContext.Jokes.FindAsync(id);
             if (existingJoke == null)
