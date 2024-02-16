@@ -1,30 +1,31 @@
 ﻿using Domain.Entities;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Domain.Aggregate
 {
     public class Joke
     {
         public JokeId Id { get; }
-        public JokeText Text { get; }
+        public JokeText Text { get; private set; }
 
         private Joke(JokeId id, JokeText text)
         {
-            Id = id ?? throw new ArgumentNullException(nameof(id));
+            Id = id;
             Text = text ?? throw new ArgumentNullException(nameof(text));
         }
 
-        private Joke(JokeText text)
+        public void SetJokeText(JokeText text)
         {
-            Text = text ?? throw new ArgumentNullException(nameof(text));
+            Text = text;
         }
 
-        public void SetJokeText(JokeText Text) => Text = Text;
-
-
-        public static Joke Create(JokeText text) => new Joke(text);
+        public static Joke Create(JokeText text, JokeId id = null) => new Joke(id, text);
         public static Joke Delete(Joke joke) => new Joke(joke.Id, joke.Text);
-        public static Joke Bulid(JokeText text) => new Joke(text);
-        public static Joke Update(JokeId id, JokeText text) => new Joke(id, text);
+        public static Joke Update(Joke joke)
+        {
+            return new Joke(joke.Id, joke.Text);
+        }
+
         public static Joke GetRamdom()
         {
             Dictionary<int, string> jokes = new Dictionary<int, string>
@@ -38,7 +39,7 @@ namespace Domain.Aggregate
 
             Random random = new Random();
             int randomKey = random.Next(1, jokes.Count + 1);
-            return Bulid(new JokeText(jokes[randomKey]));
+            return Create(new JokeText(jokes[randomKey]));
         }
     }
 }

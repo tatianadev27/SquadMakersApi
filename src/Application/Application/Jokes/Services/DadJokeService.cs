@@ -20,7 +20,7 @@ namespace Application.Services
         public async Task<Joke> GetRandomJoke()
         {
             var jokeText = await _jokeApiProxy.GetAsync(_apiBaseUrl);
-            return Joke.Bulid(new JokeText(jokeText));
+            return Joke.Create(new JokeText(jokeText));
         }
     }
 }

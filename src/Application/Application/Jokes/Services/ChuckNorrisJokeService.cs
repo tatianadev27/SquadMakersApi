@@ -21,7 +21,7 @@ namespace Application.Services
         {
 
             var jokeText = await _jokeApiProxy.GetAsync(_apiBaseUrl);
-            return Joke.Bulid(new JokeText(jokeText));
+            return Joke.Create(new JokeText(jokeText));
         }
     }
 }
