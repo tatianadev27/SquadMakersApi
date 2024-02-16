@@ -14,6 +14,7 @@ namespace Application.Services.Factory
 
         public IJokeService Create(string type)
         {
+            type = type ?? string.Empty;
             switch (type.ToLower())
             {
                 case "chuck":
